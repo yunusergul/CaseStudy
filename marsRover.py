@@ -17,13 +17,13 @@ for j in range (0,2):
     direc = 0
     b = []
     a.append(input(""))
-    if (a[j].split(" ")[2]== "N" or a[j].split(" ")[2] =="n"):
+    if (a[j].split(" ")[2].lower() =="n"):
         direc=0
-    elif(a[j].split(" ")[2]== "E" or a[j].split(" ")[2] =="e"):
+    elif(a[j].split(" ")[2].lower() =="e"):
         direc = 1
     b=input()
     for i in range(0,len(b)):
-        if(b[i]=="M"):
+        if(b[i].lower()=="m"):
             if(direc%4==0):
                 y+=1
             elif(direc%4==1):
@@ -32,9 +32,9 @@ for j in range (0,2):
                 y-=1
             elif(direc%4==3):
                 x-=1
-        elif(b[i] == "L"):
+        elif(b[i].lower() == "l"):
             direc-=1
-        elif(b[i] == "R"):
+        elif(b[i].lower() == "r"):
             direc+=1
         else:
             print("error")
