@@ -1,5 +1,16 @@
 input("")
 a = []
+def cont(adic):
+    dicrot=""
+    if (adic%4==0):
+        dicrot="N"
+    elif(adic%4==1):
+        dicrot = "E"
+    elif(adic%4==2):
+        dicrot = "S"
+    else:
+        dicrot = "W"
+    return dicrot
 for j in range (0,2):
     x = 0
     y = 0
@@ -28,7 +39,7 @@ for j in range (0,2):
         else:
             print("error")
 
-    print(int(a[j].split(" ")[0])+x ," ", int(a[j].split(" ")[1])+y, "N" if direc%4==0 else "E" )
+    print(int(a[j].split(" ")[0])+x ," ", int(a[j].split(" ")[1])+y, cont(direc))
 
 
 
